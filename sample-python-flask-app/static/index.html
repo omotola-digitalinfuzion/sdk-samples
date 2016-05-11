@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Index.html Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body ontouchstart="">
+    <link rel="stylesheet" href="../static/css/bootstrap.dark.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-select.min.css">
+
+    <script src="../static/js/libs/jquery-2.1.4.min.js"></script>
+    <script src="../static/js/ui.bootstrap.js"></script>
+    <script src="../static/js/ui.panel.js"></script>
+
+    <div id='navbarDiv'></div>
+    <div id='contentDiv' class='container'>
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <h1>Index HTML Example</h1>
+          <p>This is an example of a statically served index.html.  The following function uses <a href="http://flask.pocoo.org/docs/0.10/api/">Flask's API</a>.  <code>send_static_file</code> is supposedly safe and will not return files that do not exist.  Typically users should not serve
+          static content using Flask and should instead rely on their web server.
+          </p>
+          <pre>
+@app.route("/contents/&lt;page&gt;")<br>
+def content(page):<br>
+	return app.send_static_file(page)<br>
+    	  </pre>
+        </div>
+    </div>
+
+    <script>
+        window.URL = window.URL || window.webkitURL;
+        window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
+    </script>
+    <script src="../static/js/libs/bootstrap.min.js"></script>
+    <script src="../static/js/libs/bootstrap-select.min.js"></script>
+</body>
+</html>

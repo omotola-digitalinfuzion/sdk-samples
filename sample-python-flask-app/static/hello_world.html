@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body ontouchstart="">
+    <link rel="stylesheet" href="../static/css/bootstrap.dark.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-select.min.css">
+
+    <script src="../static/js/libs/jquery-2.1.4.min.js"></script>
+    <script src="../static/js/ui.bootstrap.js"></script>
+    <script src="../static/js/ui.panel.js"></script>
+
+    <div id='navbarDiv'></div>
+    <div id='contentDiv' class='container'>
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+        <h1>Welcome to Flask</h1>
+            <p>
+            Here are several examples of the Flask API in action:
+            </p>
+            <ul>
+                <li>Static Content Example: <a href = "/contents/index.html">Index</a></li>
+                <li>Static Content Example: <a href = "/contents/hello_world.html">Hello World</a></li>
+                <li>Template Example: <a href = "/template_navbar">Navbar </a>(Uses Jinja Template and RESTful api to fill menu bar)</li>
+                <li>Template Example: <a href = "/template_navbar_static">Navbar Static</a></li>
+                <li>Template Example: <a href = "/template_navbar_fixed">Navbar Fixed</a></li>
+                <li>RESTful Example: <a href = "/api/file_menu">File Menu Options</a></li>
+                <li>RESTful Example: <a href = "/api/asdasd">Invalid API</a> (Note: still returns json data)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        window.URL = window.URL || window.webkitURL;
+        window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
+    </script>
+    <script src="../static/js/libs/bootstrap.min.js"></script>
+    <script src="../static/js/libs/bootstrap-select.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consolidated User Interface (cUI)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body ontouchstart="">
+    <link rel="stylesheet" href="static/css/bootstrap.dark.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-select.min.css">
+
+
+    <script src="static/js/libs/jquery-2.1.4.min.js"></script>
+    <script src="static/js/ui.bootstrap.js"></script>
+    <script src="static/js/ui.panel.js"></script>
+
+    <div id='navbarDiv'></div>
+    <div id='contentDiv' class='container'>
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <h1>Navbar example</h1>
+          <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+          <p>
+            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+          </p>
+        </div>
+        <div class="jumbotron">
+          <h1>lorem ipsum</h1>
+          <p>Lorem ipsum dolor sit amet, in nonumy causae reprehendunt ius, reque saepe iracundia ad duo, an vel illud altera patrioque. At vis rebum postea accusam. In ius vitae laudem admodum, ne nihil detraxit pertinacia sed. Regione graecis sit an, ei nibh explicari his. Liber solet ornatus cum no. Vel solet luptatum iracundia eu, ullum patrioque id mea, et everti nostrum conclusionemque duo.
+
+Has no propriae indoctum qualisque, quodsi atomorum vix ad. Id quo iudico laoreet. In duo augue civibus deserunt. Sed zril rationibus no, et pri modus civibus appareat.
+
+At sea reque nostro, te alia vidit liber cum, ex ius detracto persecuti. Cu est feugiat placerat contentiones, mei no harum ignota. Dico epicurei appellantur eu duo, facete insolens explicari ea vis. Et eum nisl putant.
+
+Pro nisl antiopam an. Vix cibo tamquam intellegam te. Usu possim epicuri in. Ius ex corpora legendos delicatissimi. Ceteros percipitur et sit, ea epicurei pertinacia est.
+
+Sed velit definitionem no, quot saepe ad eam. Ne quando platonem usu, ea eos ullum definitionem, paulo dictas eu pri. Pri te constituto adversarium, aliquando persecuti ad qui, ut elit affert eleifend est. Iudico quando mediocrem ad per, verear officiis euripidis ea ius. Deleniti voluptua perfecto ad nec, usu ad harum mentitum elaboraret. Pro dico feugiat fabulas eu.</p>
+          <p>
+            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+          </p>
+        </div>
+    </div>
+
+    <script>
+        window.URL = window.URL || window.webkitURL;
+        window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
+    </script>
+    <script>
+
+    function createFileMenu(menuBar){
+        var fileMenu = new UI.Menubar.Menu({
+            'title':'File',
+            'menuType':UI.MenuTypes.DROPDOWN
+        });
+        menuBar.add(fileMenu);
+
+        var fileNew = new UI.Menubar.MenuItem("New");   fileMenu.add(fileNew);
+        var fileOpen = new UI.Menubar.MenuItem("Open"); fileMenu.add(fileOpen);
+        fileMenu.add(new UI.Menubar.MenuSeparator());
+
+        var fileImp = new UI.Menubar.MenuItem("Import");  fileMenu.add(fileImp);
+        var fileExp = new UI.Menubar.MenuItem("Export");  fileMenu.add(fileExp);
+        fileMenu.add(new UI.Menubar.MenuSeparator());
+        var fileQuit = new UI.Menubar.MenuItem("Quit");  fileMenu.add(fileQuit);
+
+        fileNew.onClick(function(evt){
+            console.log('NEW');
+        });
+    }
+    function createOptionsMenu(menuBar){
+        var fileMenu = new UI.Menubar.Menu({
+            'title':'Options',
+            'menuType':UI.MenuTypes.DROPDOWN
+        });
+        menuBar.add(fileMenu);
+
+        var fileAbout = new UI.Menubar.MenuItem("About");   fileMenu.add(fileAbout);
+        var fileHelp = new UI.Menubar.MenuItem("Help"); fileMenu.add(fileHelp);
+
+        fileAbout.onClick(function(evt){
+            console.log('ABOUT');
+        });
+        fileHelp.onClick(function(evt){
+            console.log('HELP');
+        });
+    }
+    $(document).ready(function(){
+        console.log("Document Ready, Building Interface");
+
+
+
+        var menubar = new UI.Menubar({
+            'menuBarType':UI.MenuBarTypes.STATIC
+        });
+        $('#navbarDiv').get(0).appendChild(menubar.dom);
+
+        var menuFile = new UI.Menubar.Menu();
+        createFileMenu(menubar);
+        createOptionsMenu(menubar);
+
+        var navMenuItem = new UI.Menubar.Menu({
+            'title':'Default Navbar',
+            'menuType':UI.MenuTypes.SINGLE
+        });
+        var navFixedMenuItem = new UI.Menubar.Menu({
+            'title':'Fixed Navbar',
+            'menuType':UI.MenuTypes.SINGLE
+        });
+        var navStaticMenuItem = new UI.Menubar.Menu({
+            'title':'Static Navbar',
+            'active':true,
+            'menuType':UI.MenuTypes.SINGLE
+        });
+        menubar.add(navMenuItem);
+        menubar.add(navFixedMenuItem);
+        menubar.add(navStaticMenuItem);
+
+        navMenuItem.onClick(function(evt){
+            window.location.href = "template_navbar";
+        });
+
+        navFixedMenuItem.onClick(function(evt){
+            window.location.href = "template_navbar_fixed";
+        });
+        navStaticMenuItem.onClick(function(evt){
+        });
+    });
+    </script>
+    <script src="static/js/libs/bootstrap.min.js"></script>
+    <script src="static/js/libs/bootstrap-select.min.js"></script>
+</body>
+</html>

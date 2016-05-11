@@ -1,0 +1,9 @@
+*~
+*.pyc
+docs/_build/*
+*.egg-info
+build/
+dist/
+node_modules/*
+CACHE
+.orig
