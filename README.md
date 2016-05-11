@@ -1,2 +1,1 @@
-This contains a set of basic applications that can be deployed to the BSVE Ecosystem.
-The applications demonstrate the appropriate app structure for deployments.
+This is a set of basic sample applications that can be deployed to the BSVE Ecosystem.
